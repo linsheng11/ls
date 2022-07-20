@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>林盛</title>
+<meta name="keywords" content="blog" />
+<meta name="description" content="blog" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/m.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.min.js" ></script>
+<script src="js/comm.js"></script>
+<!--[if lt IE 9]>
+<body>
+<!--top begin-->
+<header id="header">
+  <div class="navbox">
+    <h2 id="mnavh"><span class="navicon"></span></h2>
+    <div class="logo"></div>
+    <nav>
+      <ul id="starlist">
+        <li><a href="index.html">首页</a></li>
+		<li><a href="index.html">待定</a></li>
+      </ul>
+    </nav>
+    <div class="searchico"></div>
+  </div>
+</header>
+<div class="searchbox">
+<!--top end-->
+<article> 
+  <!--lbox begin-->
+  <div class="lbox">
+    <div class="content_box whitebg">
+      <!-- <h2 class="htitle"><span class="con_nav">您现在的位置是：<a href="info.html">网站首页</a>><a href="info.html">个人博客模板</a></span>个人博客模板</h2> -->
+      <h1 class="con_tilte">[Unity展厅类] 翻书系统</h1>
+      <p class="bloginfo"><i class="avatar"><img src=""></i><span>林盛</span><span>2022-07-20</span><span>【<a href="index.html">Unity展厅类</a>】</span></p>
+      <p class="con_info"><b>简介</b>用Unity做展厅类的软件,有滑屏、翻书、单切页、播放视频、网页浏览、照片墙、手势识别、互动全息投影、多指触摸屏幕、签名、
+	  N连屏、AI语音、AR/VR，等等。注意:资源需要动态替换！</p>
+	  <h4>  Unity版本：2018.2.20f</h4>
+	  <h4>  插件：Book-Page Curl Pro （网络上很多这里就不提供下载了） </h4>
+      <div class="con_text">
+        <h4>  效果图: </h4><img src="images/book/fs.gif" height="150" width="300" /> 
+       <p> 1> 导入插件，文件夹目录如下 ：</p>
+	    <a href="images/book/22.png" target="_blank" ><img src="images/book/22.png " height="150" width="300" /> </a>
+	   <p> 2> 导入后，在场景中创建个Canvas，然后找到Prefabs文件夹下的预设体BookPro，将该预设体拖入Canvas中,运行之后就可以进行翻书操作了~ </p>
+	   <p> 3> 修改预制体 ，其中insPage0是前 1 是后 组合起来就是Papers数组0。RightHotSpot右边翻页热区 LeftHotSpot同理</p>
+	    <div class="box">
+		<div class="wxbox">
+			<ul>
+			<li><a href="images/book/33.png" target="_blank" ><img src="images/book/33.png"  /> </a> </li>
+			<li> <a href="images/book/11.png" target="_blank" ><img src="images/book/11.png"/> </a></li>
+			</ul>
+		</div>
+		</div>
+		
+	   <p> 4> 需求是一开始书本就是翻开的而Current Paper 默认是0 ，Current Paper 就要设置成1。 同理 Flipping Range 里的StartFlippingPaper =1  修改BookPro.cs 添加页面</p>
+	   <img src="images/book/4.png" height="300" width="400" /> 
+	   <p> 5> 由于初始页面是下标1 所以在添加页面时候要做下处理 当图片大于2 又是奇数则多加一页 pageCount % 2 + pageCount / 2  for循环走一个
+		<a href="images/book/55.png" target="_blank" ><img src="images/book/55.png" height="300" width="400" /> </a>
+	   Count<=2 {正常添加页面 books.StartFlippingPaper = 1;books.EndFlippingPaper = 0;books.currentPaper = 1;books.UpdatePages();} </p>
+	   <p> 6> AsyncImageDownload  进行图片读取 赋值 即可，就不多做赘述了</p>
+      </div>
+    </div>
+    </div>
+	 <div class="rbox">
+    <div class="card">
+      <h2>我的名片</h2>
+      <p>网名：林盛</p>
+      <p>职业：程序员</p>
+      <p>现居：福州</p>
+      <p>网址：This</p>
+      <ul class="linkmore">
+        <li><a href="" target="_blank" class="iconfont icon-zhuye" title="网站地址"></a></li>
+        <li><a href="" target="_blank" class="iconfont icon-youxiang" title="我的邮箱"></a></li>
+        <li><a href="" target="_blank" class="iconfont icon---" title="444933202"></a></li>
+        <!-- <li id="weixin"><a href="" target="_blank" class="iconfont icon-weixin" title="关注我的微信"></a><i><img src="images/wx.png"></i></li> -->
+      </ul>
+    </div>
+   <div class="whitebg cloud">
+      <h2 class="htitle">标签云</h2>
+      <ul>
+        <a href="" target="_blank">!</a> <a href="" target="_blank">Unity展厅类</a> 
+      </ul>
+    </div>
+    <!-- <div class="links whitebg"> -->
+      <!-- <h2 class="htitle"><span class="sqlink"></span>友情链接</h2> -->
+      <!-- <ul> -->
+        <!-- <a href="" target="_blank">xxx</a> -->
+      <!-- </ul> -->
+    <!-- </div> -->
+  </div>
+	
+	 <div class="lbox">
+	 <div class="content_box whitebg">
+	 <div class="nextinfo">
+          <p>上一篇：<a href="/download/f/886.html"></a> <span style="float:right;">下一篇：<a href="/download/f/907.html"></a></span>  </p>
+        </div></div></div>
+	
+	</article> 
+	
+<footer>
+  <div class="box">
+    <div class="wxbox">
+      <ul>
+        <li><img src="images/wxgzh.jpg"><span>微信公众号</span></li>
+        <li><img src="images/wx.png"><span>我的微信</span></li>
+      </ul>
+    </div>
+	
+    <div class="endnav">
+      <p><b>关于我们</b></p>
+      <p></p>
+      <!-- <p>&copy; 2022 XX公司&nbsp;&nbsp;ICP备XXXXXXXX号&nbsp;&nbsp;：<a href="" title="xxx" target="_blank">xxx</a></p> -->
+    </div>
+  </div>
+  <a href="#">
+  <div class="top"></div>
+  </a> </footer>
+	
+</body>
+</html>
