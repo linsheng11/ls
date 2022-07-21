@@ -312,7 +312,7 @@ about
 .ab_dubai { margin-bottom: 15px; display: inline-block; }
 .ly_button { float: right; width: 100px; background: #000; text-align: center; border-radius: 3px; line-height: 30px }
 .ly_button a { color: #FFF }
-.gd_title { margin: 20px 0; font-size: 18px; background: url(../images/hline.png) no-repeat bottom right; width: 120px; clear: both; background-size: 40px; border-bottom: #000 1px dashed; padding-left: 10px; padding-bottom: 5px; display: inline-block; }
+.gd_title { margin: 20px 0; font-size: 18px; background: url(../images/hline.png) no-repeat bottom right; width: 100%; clear: both; background-size: 40px; border-bottom: #000 1px dashed; padding-left: 10px; padding-bottom: 5px; display: inline-block; }
 .xinlu li { width: 25%; float: left; overflow: hidden; margin-bottom: 20px }
 .xinlu li a { display: block; margin: 0 10px; background: #f3f3f3; padding: 20px; }
 .xinlu li i { display: block; overflow: hidden; height: 120px; margin-bottom: 10px }

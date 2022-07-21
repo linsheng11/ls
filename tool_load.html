@@ -33,33 +33,33 @@
   <div class="lbox">
     <div class="content_box whitebg">
       <!-- <h2 class="htitle"><span class="con_nav">您现在的位置是：<a href="info.html">网站首页</a>><a href="info.html">个人博客模板</a></span>个人博客模板</h2> -->
-      <h1 class="con_tilte">[Unity展厅类] 翻书系统</h1>
-      <p class="bloginfo"><i class="avatar"><img src=""></i><span>林盛</span><span>2022-07-20</span><span>【<a href="index.html">Unity展厅类</a>】</span></p>
+      <h1 class="con_tilte">[Unity展厅类] 工具类：读取StreamingAssets下图片视频Json等数据</h1>
+      <p class="bloginfo"><i class="avatar"><img src=""></i><span>林盛</span><span>2022-07-21</span><span>【<a href="index.html">Unity展厅类</a>】</span></p>
       <p class="con_info"><b>简介</b>用Unity做展厅类的软件,有滑屏、翻书、单切页、播放视频、网页浏览、照片墙、手势识别、互动全息投影、中控、多指触摸屏幕、签名、
 	  N连屏、AI语音、AR/VR，等等。注意:资源需要动态替换！</p>
 	  <h4>  Unity版本：2018.2.20f</h4>
-	  <h4>  插件：Book-Page Curl Pro （网络上很多这里就不提供下载了） </h4>
+	  <h4>  插件： </h4>
       <div class="con_text">
-        <h4>  效果图: </h4><img src="images/book/fs.gif" height="150" width="300" /> 
-		<h2 class="gd_title">1> 导入插件，文件夹目录如下 ：</h2>
-	    <a href="images/book/22.png" target="_blank" ><img src="images/book/22.png " height="150" width="300" /> </a>
-	   <p>  导入后，在场景中创建个Canvas，然后找到Prefabs文件夹下的预设体BookPro，将该预设体拖入Canvas中,运行之后就可以进行翻书操作了~ </p>
-	   <p>  修改预制体 ，其中insPage0是前 1 是后 组合起来就是Papers数组0。RightHotSpot右边翻页热区 LeftHotSpot同理</p>
-	    <div class="box">
-		<div class="wxbox">
-			<ul>
-			<li><a href="images/book/33.png" target="_blank" ><img src="images/book/33.png"  /> </a> </li>
-			<li> <a href="images/book/11.png" target="_blank" ><img src="images/book/11.png"/> </a></li>
-			</ul>
-		</div>
-		</div>
-		
-	   <p>  需求是一开始书本就是翻开的而Current Paper 默认是0 ，Current Paper 就要设置成1。 同理 Flipping Range 里的StartFlippingPaper =1  修改BookPro.cs 添加页面</p>
-	   <img src="images/book/4.png" height="300" width="400" /> 
-	   <p>  由于初始页面是下标1 所以在添加页面时候要做下处理 当图片大于2 又是奇数则多加一页 pageCount % 2 + pageCount / 2  for循环走一个
-		<a href="images/book/55.png" target="_blank" ><img src="images/book/55.png" height="300" width="400" /> </a>
-	   Count<=2 {正常添加页面 books.StartFlippingPaper = 1;books.EndFlippingPaper = 0;books.currentPaper = 1;books.UpdatePages();} </p>
-	   <a href="tool_load.html" target="_blank" ><h2 class="gd_title">2> 读取图片并且赋值 ：</h2></a>
+		<h2 class="gd_title">1> 读取图片并且赋值 ： 视频读取一样</h2>
+				<div class="box">
+				<div class="wxbox">
+					<ul>
+					<li><a href="images/11.png" target="_blank" ><img src="images/11.png"  /> </a> </li>
+					<li> <a href="images/book/66.png" target="_blank" ><img src="images/book/66.png"/> </a></li>
+					</ul>
+				</div>
+				</div>
+		<h2 class="gd_title">2> 读取Json并且赋值 ,用到litjson.dll：</h2>	
+	   <p> JSON题库： {"tk":[{"ID":"1","Topic":"x","T_A":"x","T_B":"x","T_C":"x","T_D":"x","Answer":"2"}]} </p>
+	   <div class="box">
+				<div class="wxbox">
+					<ul>
+					<li><a href="images/Tool/22.png" target="_blank" ><img src="images/Tool/22.png"  /> </a> </li>
+					<li> <a href="images/Tool/33.png" target="_blank" ><img src="images/Tool/33.png"/> </a></li>
+					</ul>
+				</div>
+				</div>
+	  
       </div>
     </div>
     </div>
