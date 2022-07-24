@@ -103,7 +103,7 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
    type: git
-   repository: https://github.com/linsheng11/ls.git
+   repository: https://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@github.com/linsheng11/ls.git
    branch: master
 #模型选择
 live2d:
