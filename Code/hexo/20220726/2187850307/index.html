@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/t32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/t16.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google-site-verification=FS45SI7h43weCs9qWgfBdgpkAzzJj6meJfCGPOZGxN0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Styles:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"linsheng.tk","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","darkmode":false,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;简介：使用github+hexo搭建网站,我使用的主题是next | next版本为 7.8；hexo版本5.4.2；    1： Git安装点击进入：Git下载地址1————Git下载地址2： 如果下载很慢：国内Git镜像站点 &lt;—翻到最下面最新的下(Git-XXX-64-bit.exe) ；下完默认下一步就可以安装完成！ 不放心可以打开cmd命令输入  12git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【hexo建站】 一: git + hexo + next 下载与安装">
+<meta property="og:url" content="https://linsheng.tk/Code/hexo/20220726/2187850307/index.html">
+<meta property="og:site_name" content="L . S">
+<meta property="og:description" content="&amp;emsp;简介：使用github+hexo搭建网站,我使用的主题是next | next版本为 7.8；hexo版本5.4.2；    1： Git安装点击进入：Git下载地址1————Git下载地址2： 如果下载很慢：国内Git镜像站点 &lt;—翻到最下面最新的下(Git-XXX-64-bit.exe) ；下完默认下一步就可以安装完成！ 不放心可以打开cmd命令输入  12git">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-26T06:10:19.000Z">
+<meta property="article:modified_time" content="2022-08-03T06:22:27.424Z">
+<meta property="article:author" content="L . S">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://linsheng.tk/Code/hexo/20220726/2187850307/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//gcore.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <title>【hexo建站】 一: git + hexo + next 下载与安装 | L . S</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/linsheng11/ls/js/clicklove.js"></script>
+
+<div id="afdianicon" style="position: fixed;right: 0;bottom: 0;width: 50px;height: 50px;z-index: 99;">
+        <a target="_blank" rel="noopener" href="https://afdian.net/@linsheng11/plan"><img src="https://gcore.jsdelivr.net/gh/muzihuaner/huancdn/img/202207222331827.png" alt="" style="width:100%;height:100%"></a>
+</div>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L . S</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">开心每一天</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        
+        
+        
+	        
+           <li class="menu-item menu-item-livee">
+                <a href="/categories/live/" rel="section"><i class="fa fa-coffee fa-fw"></i>生活</a>
+          <!-- 有两个页面例如：/XX/XX/ -->
+          <li class="menu-item menu-item-leibiao" type="button" id="btn_lb" onclick="divDisplayAndHide()" value = "0">
+                <a><i class="fa fa-folder-open fa-fw"></i>文章列表<i class="fa fa-level-down fa-fw"></i></a>
+
+            <li class="menu-item menu-item-unity">
+                <a href="/categories/Code/" rel="section">&emsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-free-code-camp fa-fw"></i>
+                Code </a>
+            <li class="menu-item menu-item-blender"> 
+                <a href="/categories/blender/" rel="section"> &emsp;&nbsp;&nbsp;&nbsp;<i class="fa custom Blender"></i>
+                Blender </a>
+           
+
+          
+           
+        
+        
+        
+	        
+           
+            <!-- 单页面/XX/XX/ --><li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+          
+        
+        
+        
+	        
+           
+    
+    
+  </ul>
+</nav>
+<style type="text/css">
+    .menu-item.menu-item-unity{display:block;}
+    .menu-item.menu-item-blender{display:block;}
+  </style>
+<script type="text/javascript">
+  function divDisplayAndHide() {
+    var unity = document.getElementsByClassName("menu-item menu-item-unity");
+    var blender = document.getElementsByClassName("menu-item menu-item-blender");
+    var val = document.getElementById("btn_lb").value;
+    if(val == "0"){
+      document.getElementById("btn_lb").value = "1";
+      for(var i=0;i<unity.length;i++){
+					 	unity[i].style.display = "none";
+					 	blender[i].style.display = "none";
+					}
+    }else{
+      document.getElementById("btn_lb").value = "0";
+      for(var i=0;i<unity.length;i++){
+					 	unity[i].style.display = "block";
+					 	blender[i].style.display = "block";
+					}
+    }
+    }
+  </script>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://linsheng.tk/Code/hexo/20220726/2187850307/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/author.jpg">
+      <meta itemprop="name" content="L . S">
+      <meta itemprop="description" content="那些年你很冒险的梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L . S">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【hexo建站】 一: git + hexo + next 下载与安装
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-26 14:10:19" itemprop="dateCreated datePublished" datetime="2022-07-26T14:10:19+08:00">2022-07-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Code/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo建站</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Code/hexo/20220726/2187850307/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Code/hexo/20220726/2187850307/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+		<div>
+    
+      
+        <div class="note info no-icon" style="color:#8e3e1f">
+    <i class="fa fa-lightbulb-o"></i>&emsp;简介：使用github+hexo搭建网站,我使用的主题是next | next版本为 7.8；hexo版本5.4.2；
+</div>
+
+
+<h2 id="1：-Git安装"><a href="#1：-Git安装" class="headerlink" title="1： Git安装"></a>1： Git安装</h2><p>点击进入：<a target="_blank" rel="noopener" href="https://git-scm.com/">Git下载地址1</a>————<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git下载地址2</a>： 如果下载很慢：<a target="_blank" rel="noopener" href="https://registry.npmmirror.com/binary.html?path=git-for-windows/">国内Git镜像站点</a> &lt;—翻到最下面最新的下(Git-XXX-64-bit.exe) ；下完默认下一步就可以安装完成！ 不放心可以打开cmd命令输入 </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>点击进入：<a target="_blank" rel="noopener" href="https://www.bing.com/search?q=git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81&qs=SC&pq=gitshang&sc=8-8&cvid=178183EC8161410C9E3369D0878BA6BC&FORM=QBRE&sp=1">git上传代码到hub</a></p>
+<span id="more"></span>
+<p>git 不是内部命令 ? <a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=git+%E4%B8%8D%E6%98%AF%E5%86%85%E9%83%A8%E5%91%BD%E4%BB%A4&qs=HS&sc=8-0&cvid=BF0CE4E3C7C34C759543F962C50F0DDF&FORM=QBRE&sp=1">点我解决吧</a></p>
+<h2 id="2：-Hexo安装"><a href="#2：-Hexo安装" class="headerlink" title="2： Hexo安装"></a>2： Hexo安装</h2><p>点击进入：<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">安装Node：</a>；要先下载NodeJS因为要使用npm命令下载Hexo</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>npm</td>
+<td>Node.js 包管理器，可以下载包、安装包、卸载包、更新包、上传包等。</td>
+</tr>
+</tbody></table>
+<p><strong>老规矩一顿下一步就可以安装成功了</strong></p>
+<h2 id="2-1：-选择-Hexo-建站路径"><a href="#2-1：-选择-Hexo-建站路径" class="headerlink" title="2.1： 选择(Hexo)建站路径"></a>2.1： 选择(Hexo)建站路径</h2><pre><code> 我安装的是在D盘，然后在D盘某文件夹右键点 git bash here或者在终端打开 
+</code></pre>
+<p>点击进入：<a target="_blank" rel="noopener" href="https://hexo-next.readthedocs.io/zh_CN/latest/hexo/base/Hexo%E5%AE%89%E8%A3%85/">HEXO官方教程</a>；</p>
+<details>
+  <summary>点我打开,安装hexo顺序</summary>
+    复制<---前面的代码在站点文件夹中右键点 git bash here输入....
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli      &lt;---安装</span><br><span class="line">hexo <span class="keyword">init</span> blog    &lt;----建立Hexo网址, ！blog可以自己定</span><br><span class="line">cd blog    &lt;---这时候建完,会生成blog文件夹它是你自己定的name</span><br><span class="line">hexo s     &lt;------这时候可以打开网页预览了</span><br><span class="line">Ctrl c     &lt;------中断页面</span><br></pre></td></tr></table></figure>
+</details>
+
+<h2 id="2-2：-Hexo常用命令"><a href="#2-2：-Hexo常用命令" class="headerlink" title="2.2：  Hexo常用命令"></a>2.2：  Hexo常用命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hexo clean</td>
+<td>清理生成的网页，路径blog–&gt;pulibc</td>
+</tr>
+<tr>
+<td>hexo g</td>
+<td>编译,生成网页</td>
+</tr>
+<tr>
+<td>hexo s</td>
+<td>启动网页,本地地址<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></td>
+</tr>
+<tr>
+<td>hexo d</td>
+<td>上传网页到git</td>
+</tr>
+<tr>
+<td>Ctrl c</td>
+<td>中断</td>
+</tr>
+<tr>
+<td>hexo new XX</td>
+<td>生成文章，路径：blog–source–_porsts</td>
+</tr>
+<tr>
+<td>hexo new page XX</td>
+<td>生成页面，路径：blog–source XX</td>
+</tr>
+<tr>
+<td>hexo new draft XX</td>
+<td>生成草稿</td>
+</tr>
+</tbody></table>
+<h2 id="3：-nexT安装"><a href="#3：-nexT安装" class="headerlink" title="3： nexT安装"></a>3： nexT安装</h2><p>点击进入：<a target="_blank" rel="noopener" href="https://hexo-next.readthedocs.io/zh_CN/latest/next/base/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">Next官方教程</a>；</p>
+<pre><code> 两种方式进行安装我使用第二种：
+ 1：git clone https://github.com/theme-next/hexo-theme-next themes/next
+ 2：下载https://github.com/theme-next/hexo-theme-next,将包解压到blog--themes里。
+ &lt;————————————————————————————————————————————————————————————————————————&gt;
+ 3：修改主题hexo-theme-next；改文件夹名字next 。
+ 4：然后修改站点配置文件_config.yml。主题也有一个config 。
+ 5：找到blog--_config.yml,搜索：theme:  将 theme: XXXXXX 换成next 。
+ 6：此时编写命令hexo g , hexo s;
+ 7：网址刷新一下就可以看到next主题了。
+</code></pre>
+<div class="poem-wrap">
+  <div class="poem-border poem-left"></div>
+  <div class="poem-border poem-right"></div>
+    <h1>世间多浮躁<br>当吟诗一首</br></h1>
+    <p id="poem">挑选中...</p>
+    <p id="info">
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+  </script>
+</div>
+      
+ 
+    <div>
+    
+        <p style="text-align: center"><a target="_blank" rel="noopener" href="https://afdian.net/@linsheng11/plan" ><img src="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/afd.png"></img></a></p>
+    
+</div>
+  
+    </div>
+
+    
+    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>【hexo建站】 一: git + hexo + next 下载与安装</a></p>
+  <p><span>文章作者:</span> L . S</a></p>
+  <p><span>发布时间:</span>2022年07月26日 - 14:10:19</p>
+  <p><span>最后更新:</span>2022年08月03日 - 14:22:27</p>
+  <p><span>原始链接:</span><a href="/Code/hexo/20220726/2187850307/" title="【hexo建站】 一: git + hexo + next 下载与安装">https://linsheng.tk/Code/hexo/20220726/2187850307/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://linsheng.tk/Code/hexo/20220726/2187850307/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+      </div>
+ 
+</div>
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/live/20220725/1649077932/" rel="prev" title="【生活】 打卡福州上下杭历史文化街区">
+      <i class="fa fa-chevron-left"></i> 【生活】 打卡福州上下杭历史文化街区
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Code/hexo/20220729/1581529082/" rel="next" title="【hexo建站】 二: SSH方式上传至github">
+      【hexo建站】 二: SSH方式上传至github <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%9A-Git%E5%AE%89%E8%A3%85"><span class="nav-text">1： Git安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%BC%9A-Hexo%E5%AE%89%E8%A3%85"><span class="nav-text">2： Hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1%EF%BC%9A-%E9%80%89%E6%8B%A9-Hexo-%E5%BB%BA%E7%AB%99%E8%B7%AF%E5%BE%84"><span class="nav-text">2.1： 选择(Hexo)建站路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2%EF%BC%9A-Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">2.2：  Hexo常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%EF%BC%9A-nexT%E5%AE%89%E8%A3%85"><span class="nav-text">3： nexT安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">世间多浮躁当吟诗一首</span></a></div>
+
+          <!--/ 在目录里面显示回到首页 -->
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="L . S"
+      src="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/author.jpg">
+  <p class="site-author-name" itemprop="name">L . S</p>
+  <div class="site-description" itemprop="description">那些年你很冒险的梦</div>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span style="font-size:20px ;color:#7bbfea;font-weight:bold; ">0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">L . S</span>
+</div>
+
+<span id="timeDate">载入天数...</span>
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("07/25/2022 12:49:00");
+    //此处修改你的建站时间或者网站上线时间 
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = "已在未知中探险了&emsp;🌎&emsp;"+ "<a style='color:#feeeed'>" +dnum+"</a>" +" 天   " ;
+    //document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script src="//gcore.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '0px',
+  left: 'unset',
+  time: '0s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: 'transparent',
+  buttonColorLight: 'transparent',
+  saveInCookies: false,
+  label: '',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+if (window.darkmode && !window.darkmode.isActivated()) {
+  window.darkmode.toggle();
+  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
+  if (toggleButtons && toggleButtons.length > 0) {
+    for (i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].classList.add("darkmode-toggle--white");
+    }
+  }
+}
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//gcore.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XckMsgGMfHIdM6bemJBHa9t7-gzGzoHsz',
+      appKey     : 'aYXXMcFO9X4AXe3JMdVmAU1u',
+      placeholder: "开始你的表演",
+      avatar     : 'monsterid',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

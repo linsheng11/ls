@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/t32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/t16.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google-site-verification=FS45SI7h43weCs9qWgfBdgpkAzzJj6meJfCGPOZGxN0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Styles:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"linsheng.tk","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","darkmode":false,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&amp;emsp;简介：用Unity做展厅类的软件,有滑屏、翻书、单切页、播放视频、网页浏览、照片墙、手势识别、互动全息投影、中控、多指触摸屏幕、签名、N连屏、飞屏、AI语音、AR&#x2F;VR，等等。&amp;emsp; 注意:资源需要动态替换！Unity版本：2018.2.20f；   1： 工具类👉 加载前提介绍 1 由于项目会有大量图片视频，都打进Resources  2 考虑到复用性，图片可能经常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Unity展厅】 工具合集">
+<meta property="og:url" content="https://linsheng.tk/Code/unity/20220801/21012080/index.html">
+<meta property="og:site_name" content="L . S">
+<meta property="og:description" content="&amp;emsp;简介：用Unity做展厅类的软件,有滑屏、翻书、单切页、播放视频、网页浏览、照片墙、手势识别、互动全息投影、中控、多指触摸屏幕、签名、N连屏、飞屏、AI语音、AR&#x2F;VR，等等。&amp;emsp; 注意:资源需要动态替换！Unity版本：2018.2.20f；   1： 工具类👉 加载前提介绍 1 由于项目会有大量图片视频，都打进Resources  2 考虑到复用性，图片可能经常">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-01T07:51:33.000Z">
+<meta property="article:modified_time" content="2022-08-03T06:23:24.903Z">
+<meta property="article:author" content="L . S">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://linsheng.tk/Code/unity/20220801/21012080/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//gcore.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <title>【Unity展厅】 工具合集 | L . S</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/linsheng11/ls/js/clicklove.js"></script>
+
+<div id="afdianicon" style="position: fixed;right: 0;bottom: 0;width: 50px;height: 50px;z-index: 99;">
+        <a target="_blank" rel="noopener" href="https://afdian.net/@linsheng11/plan"><img src="https://gcore.jsdelivr.net/gh/muzihuaner/huancdn/img/202207222331827.png" alt="" style="width:100%;height:100%"></a>
+</div>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">L . S</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">开心每一天</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        
+        
+        
+	        
+           <li class="menu-item menu-item-livee">
+                <a href="/categories/live/" rel="section"><i class="fa fa-coffee fa-fw"></i>生活</a>
+          <!-- 有两个页面例如：/XX/XX/ -->
+          <li class="menu-item menu-item-leibiao" type="button" id="btn_lb" onclick="divDisplayAndHide()" value = "0">
+                <a><i class="fa fa-folder-open fa-fw"></i>文章列表<i class="fa fa-level-down fa-fw"></i></a>
+
+            <li class="menu-item menu-item-unity">
+                <a href="/categories/Code/" rel="section">&emsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-free-code-camp fa-fw"></i>
+                Code </a>
+            <li class="menu-item menu-item-blender"> 
+                <a href="/categories/blender/" rel="section"> &emsp;&nbsp;&nbsp;&nbsp;<i class="fa custom Blender"></i>
+                Blender </a>
+           
+
+          
+           
+        
+        
+        
+	        
+           
+            <!-- 单页面/XX/XX/ --><li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+          
+        
+        
+        
+	        
+           
+    
+    
+  </ul>
+</nav>
+<style type="text/css">
+    .menu-item.menu-item-unity{display:block;}
+    .menu-item.menu-item-blender{display:block;}
+  </style>
+<script type="text/javascript">
+  function divDisplayAndHide() {
+    var unity = document.getElementsByClassName("menu-item menu-item-unity");
+    var blender = document.getElementsByClassName("menu-item menu-item-blender");
+    var val = document.getElementById("btn_lb").value;
+    if(val == "0"){
+      document.getElementById("btn_lb").value = "1";
+      for(var i=0;i<unity.length;i++){
+					 	unity[i].style.display = "none";
+					 	blender[i].style.display = "none";
+					}
+    }else{
+      document.getElementById("btn_lb").value = "0";
+      for(var i=0;i<unity.length;i++){
+					 	unity[i].style.display = "block";
+					 	blender[i].style.display = "block";
+					}
+    }
+    }
+  </script>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://linsheng.tk/Code/unity/20220801/21012080/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/author.jpg">
+      <meta itemprop="name" content="L . S">
+      <meta itemprop="description" content="那些年你很冒险的梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L . S">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Unity展厅】 工具合集
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-01 15:51:33" itemprop="dateCreated datePublished" datetime="2022-08-01T15:51:33+08:00">2022-08-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Code/unity/" itemprop="url" rel="index"><span itemprop="name">unity展厅</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Code/unity/20220801/21012080/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Code/unity/20220801/21012080/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+		<div>
+    
+      
+        <div class="note info no-icon" style="color:#8e3e1f">
+    <i class="fa fa-lightbulb-o"></i>&emsp;简介：用Unity做展厅类的软件,有滑屏、翻书、单切页、播放视频、网页浏览、照片墙、手势识别、互动全息投影、中控、多指触摸屏幕、签名、N连屏、飞屏、AI语音、AR/VR，等等。&emsp; 注意:资源需要动态替换！Unity版本：2018.2.20f；
+</div>
+
+<h2 id="1：-工具类"><a href="#1：-工具类" class="headerlink" title="1： 工具类"></a>1： 工具类</h2><h3 id="👉-加载前提介绍"><a href="#👉-加载前提介绍" class="headerlink" title="👉 加载前提介绍"></a>👉 加载前提介绍</h3><pre><code> 1 由于项目会有大量图片视频，都打进Resources
+ 2 考虑到复用性，图片可能经常需要替换
+ 3 所以把资源都放在StreamingAssets下，基本都是pc所以不考虑手机上路径问题了
+</code></pre>
+<ul>
+<li>大多数平台（Unity Editor、Windows、Linux 播放器）使用Application.dataPath + “&#x2F;StreamingAssets”,</li>
+<li>macOS 播放器使用Application.dataPath + “&#x2F;Resources&#x2F;Data&#x2F;StreamingAssets”,</li>
+<li>iOS 使用Application.dataPath + “&#x2F;Raw”,</li>
+<li>Android 使用压缩包内的文件APK</li>
+<li>&#x2F;JAR 文件，”jar:file:&#x2F;&#x2F;“ + Application.dataPath + “!&#x2F;assets”.</li>
+</ul>
+<h3 id="👉-加载StreamingAssets下的资源"><a href="#👉-加载StreamingAssets下的资源" class="headerlink" title="👉 加载StreamingAssets下的资源"></a>👉 加载StreamingAssets下的资源</h3><details>
+  <summary>点我打开,获取加载路径</summary>
+
+<pre><code> 1 getINPro_IMG 参数 type 类型 图片 视频  json     two  二级目录
+</code></pre>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="built_in">string</span>&gt; list_img = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getINPro_IMG</span>(<span class="params"><span class="built_in">string</span> type = <span class="string">&quot;img&quot;</span>  , <span class="built_in">string</span> two = <span class="string">&quot;&quot;</span></span>)</span></span><br><span class="line">       &#123;</span><br><span class="line">           list_img.Clear();</span><br><span class="line">           <span class="built_in">string</span> path = <span class="string">&quot;&quot;</span>;</span><br><span class="line">           <span class="keyword">if</span> (<span class="built_in">string</span>.IsNullOrEmpty(two))</span><br><span class="line">           &#123;</span><br><span class="line">               path = Application.dataPath + <span class="string">&quot;/StreamingAssets/&quot;</span> + type + <span class="string">&quot;/&quot;</span> ;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span></span><br><span class="line">           &#123;</span><br><span class="line">               path = Application.dataPath + <span class="string">&quot;/StreamingAssets/&quot;</span> + type + <span class="string">&quot;/&quot;</span> + two + <span class="string">&quot;/&quot;</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//Debug.LogError(path);</span></span><br><span class="line">           <span class="comment">//Debug.LogError(Application.streamingAssetsPath);</span></span><br><span class="line">           <span class="keyword">if</span> (Directory.Exists(path))</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="comment">//获取文件信息</span></span><br><span class="line">               DirectoryInfo direction = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">               FileInfo[] files = direction.GetFiles(<span class="string">&quot;*&quot;</span>, SearchOption.AllDirectories);</span><br><span class="line">               list_img.Clear();</span><br><span class="line">               <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; files.Length; i++)</span><br><span class="line">               &#123;</span><br><span class="line">                   <span class="comment">//过滤掉临时文件</span></span><br><span class="line">                   <span class="keyword">if</span> (files[i].Name.EndsWith(<span class="string">&quot;.meta&quot;</span>))</span><br><span class="line">                   &#123;</span><br><span class="line">                       <span class="keyword">continue</span>;</span><br><span class="line">                   &#125;</span><br><span class="line">                   <span class="built_in">string</span> name = Path.GetFileNameWithoutExtension(files[i].ToString());</span><br><span class="line">                   <span class="comment">// FileInfo.Name是返回带扩展名的名字</span></span><br><span class="line">                   <span class="comment">//var sprite = Resources.Load&lt;Texture&gt;(name);</span></span><br><span class="line">                   list_img.Add(files[i].ToString());</span><br><span class="line">               &#125;</span><br><span class="line">               </span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h3 id="👉-本地加载设置图片"><a href="#👉-本地加载设置图片" class="headerlink" title="👉 本地加载设置图片"></a>👉 本地加载设置图片</h3><pre><code> UnityWebRequest加载图片,www图片会模糊
+ DownloadImage  两个参数url 地址   和图片RawImage，也可以传给 image
+ list_img 数组存的是图片路径
+</code></pre>
+<details>
+  <summary>点我打开,设置图片</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加载</span></span><br><span class="line">StartCoroutine(DownloadImage(url, img));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> IEnumerator <span class="title">DownloadImage</span>(<span class="params"><span class="built_in">string</span> url, RawImage img</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//上面加载图片会模糊</span></span><br><span class="line">            File.Delete(path + url.GetHashCode());</span><br><span class="line">            UnityWebRequest wr = <span class="keyword">new</span> UnityWebRequest(url);</span><br><span class="line"></span><br><span class="line">            DownloadHandlerTexture texDl = <span class="keyword">new</span> DownloadHandlerTexture(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">            wr.downloadHandler = texDl;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">yield</span> <span class="keyword">return</span> wr.SendWebRequest();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!(wr.isNetworkError || wr.isHttpError))</span><br><span class="line">            &#123;</span><br><span class="line">                Texture2D t = texDl.texture;</span><br><span class="line"></span><br><span class="line">                t.filterMode = FilterMode.Trilinear;</span><br><span class="line"></span><br><span class="line">                t.Apply();</span><br><span class="line"></span><br><span class="line">                img.texture = t;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</details>
+
+<span id="more"></span>
+
+
+<h3 id="👉-手指双击屏幕"><a href="#👉-手指双击屏幕" class="headerlink" title="👉 手指双击屏幕"></a>👉 手指双击屏幕</h3><details>
+  <summary>点我打开,查看代码</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> lastClickTime = <span class="number">-1</span>;</span><br><span class="line">        <span class="function"><span class="built_in">bool</span> <span class="title">isDoubleClickDone</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Application.platform == RuntimePlatform.Android ||</span><br><span class="line">               Application.platform == RuntimePlatform.IPhonePlayer)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (Input.touches.Length != <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    lastClickTime = <span class="number">-1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (Input.touches[<span class="number">0</span>].phase == TouchPhase.Began)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (lastClickTime == <span class="number">-1</span>)</span><br><span class="line">                            lastClickTime = Time.realtimeSinceStartup;</span><br><span class="line">                        <span class="keyword">else</span> <span class="keyword">if</span> (Time.realtimeSinceStartup - lastClickTime &lt; <span class="number">0.2f</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            lastClickTime = <span class="number">-1</span>;</span><br><span class="line">                            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            lastClickTime = Time.realtimeSinceStartup;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (Input.GetMouseButtonDown(<span class="number">0</span>))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (lastClickTime == <span class="number">-1</span>)</span><br><span class="line">                        lastClickTime = Time.realtimeSinceStartup;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (Time.realtimeSinceStartup - lastClickTime &lt; <span class="number">0.2f</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        lastClickTime = <span class="number">-1</span>;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        lastClickTime = Time.realtimeSinceStartup;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
+
+<h3 id="👉-识别手指转圈"><a href="#👉-识别手指转圈" class="headerlink" title="👉 识别手指转圈"></a>👉 识别手指转圈</h3><details>
+  <summary>点我打开,查看代码</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">List&lt;Vector2&gt; gestureDetector = <span class="keyword">new</span> List&lt;Vector2&gt;();</span><br><span class="line">        <span class="built_in">int</span> gestureCount = <span class="number">0</span>;</span><br><span class="line">        Vector2 gestureSum = Vector2.zero;</span><br><span class="line">        <span class="built_in">float</span> gestureLength = <span class="number">0</span>;</span><br><span class="line"> <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 手势转圈</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="built_in">bool</span> <span class="title">isGestureDone</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Application.platform == RuntimePlatform.Android ||</span><br><span class="line">                Application.platform == RuntimePlatform.IPhonePlayer)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (Input.touches.Length != <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    gestureDetector.Clear();</span><br><span class="line">                    gestureCount = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (Input.touches[<span class="number">0</span>].phase == TouchPhase.Canceled || Input.touches[<span class="number">0</span>].phase == TouchPhase.Ended)</span><br><span class="line">                        gestureDetector.Clear();</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (Input.touches[<span class="number">0</span>].phase == TouchPhase.Moved)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Vector2 p = Input.touches[<span class="number">0</span>].position;</span><br><span class="line">                        <span class="keyword">if</span> (gestureDetector.Count == <span class="number">0</span> || (p - gestureDetector[gestureDetector.Count - <span class="number">1</span>]).magnitude &gt; <span class="number">10</span>)</span><br><span class="line">                            gestureDetector.Add(p);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (Input.GetMouseButtonUp(<span class="number">0</span>))</span><br><span class="line">                &#123;</span><br><span class="line">                    gestureDetector.Clear();</span><br><span class="line">                    gestureCount = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (Input.GetMouseButton(<span class="number">0</span>))</span><br><span class="line">                    &#123;</span><br><span class="line">                        Vector2 p = <span class="keyword">new</span> Vector2(Input.mousePosition.x, Input.mousePosition.y);</span><br><span class="line">                        <span class="keyword">if</span> (gestureDetector.Count == <span class="number">0</span> || (p - gestureDetector[gestureDetector.Count - <span class="number">1</span>]).magnitude &gt; <span class="number">10</span>)</span><br><span class="line">                            gestureDetector.Add(p);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (gestureDetector.Count &lt; <span class="number">10</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            gestureSum = Vector2.zero;</span><br><span class="line">            gestureLength = <span class="number">0</span>;</span><br><span class="line">            Vector2 prevDelta = Vector2.zero;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; gestureDetector.Count - <span class="number">2</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                Vector2 delta = gestureDetector[i + <span class="number">1</span>] - gestureDetector[i];</span><br><span class="line">                <span class="built_in">float</span> deltaLength = delta.magnitude;</span><br><span class="line">                gestureSum += delta;</span><br><span class="line">                gestureLength += deltaLength;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">float</span> dot = Vector2.Dot(delta, prevDelta);</span><br><span class="line">                <span class="keyword">if</span> (dot &lt; <span class="number">0f</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    gestureDetector.Clear();</span><br><span class="line">                    gestureCount = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                prevDelta = delta;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">int</span> gestureBase = (Screen.width + Screen.height) / <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (gestureLength &gt; gestureBase &amp;&amp; gestureSum.magnitude &lt; gestureBase / <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                gestureDetector.Clear();</span><br><span class="line">                gestureCount++;</span><br><span class="line">                <span class="keyword">if</span> (gestureCount &gt;= <span class="number">1</span>)</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+
+<h3 id="👉-射线检测UI"><a href="#👉-射线检测UI" class="headerlink" title="👉 射线检测UI"></a>👉 射线检测UI</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理输入、射线和发送事件 空场景创建一个UI 就会自动建一个EventSystem</span></span><br><span class="line"><span class="keyword">public</span> EventSystem _mEventSystem;</span><br><span class="line"><span class="comment">//一般挂载在 Canvas 下的组件 监听UI物体的点击响应</span></span><br><span class="line"><span class="keyword">public</span> GraphicRaycaster gra;</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 检测UI 物体</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;pos&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function">GameObject <span class="title">RayDetectionUI</span>(<span class="params">Vector2 pos</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> mPointerEventData = <span class="keyword">new</span> PointerEventData(_mEventSystem);</span><br><span class="line">    <span class="keyword">if</span> (mPointerEventData != <span class="literal">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        mPointerEventData.position = pos;</span><br><span class="line">        List&lt;RaycastResult&gt; results = <span class="keyword">new</span> List&lt;RaycastResult&gt;();</span><br><span class="line"></span><br><span class="line">        gra.Raycast(mPointerEventData, results);</span><br><span class="line">        <span class="keyword">if</span> (results.Count &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//第一个碰到的,根据需求自己写哦</span></span><br><span class="line">            <span class="keyword">if</span> (results[<span class="number">0</span>].gameObject.name.Contains(<span class="string">&quot;raw&quot;</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> results[<span class="number">2</span>].gameObject;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="👉-识别手势上下左右"><a href="#👉-识别手势上下左右" class="headerlink" title="👉 识别手势上下左右"></a>👉 识别手势上下左右</h3><pre><code> 1 根据需求自行修改,放Update里
+</code></pre>
+<details>
+  <summary>点我打开,查看代码</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">Vector3 mousePos_p2;</span><br><span class="line"><span class="built_in">int</span> mouseFlag = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">bool</span> isDragLTR = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">bool</span> isDragRTL = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">if</span> (Input.GetMouseButtonDown(<span class="number">0</span>))</span><br><span class="line">&#123;</span><br><span class="line">    mousePos_p2 = Input.mousePosition;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (Input.GetMouseButton(<span class="number">0</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            Vector3 vec = Input.mousePosition - mousePos_p2;</span><br><span class="line">            <span class="keyword">if</span> (vec.magnitude &gt; <span class="number">10</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">float</span> angleYFloat = Vector3.Dot(Vector3.up, vec.normalized);</span><br><span class="line">                <span class="built_in">float</span> angleY = Mathf.Acos(angleYFloat) * Mathf.Rad2Deg;</span><br><span class="line">                <span class="built_in">float</span> angleXFloat = Vector3.Dot(Vector3.right, vec.normalized);</span><br><span class="line">                <span class="built_in">float</span> angleX = Mathf.Acos(angleXFloat) * Mathf.Rad2Deg;</span><br><span class="line">                <span class="keyword">if</span> (angleX &lt; <span class="number">45</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//上一页</span></span><br><span class="line">                    mouseFlag++;</span><br><span class="line">                    <span class="keyword">if</span> (mouseFlag == <span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        isDragLTR = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (angleX &gt;= <span class="number">135</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//下一页</span></span><br><span class="line">                    mouseFlag++;</span><br><span class="line">                    <span class="keyword">if</span> (mouseFlag == <span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        isDragRTL = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (angleY &lt;= <span class="number">45</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                   <span class="comment">//上</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (angleY &gt;= <span class="number">135</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                   <span class="comment">//下</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (Input.GetMouseButtonUp(<span class="number">0</span>))</span><br><span class="line">        &#123;   </span><br><span class="line">            mouseFlag = <span class="number">0</span>;</span><br><span class="line">            <span class="comment">//手指抬起</span></span><br><span class="line">            <span class="keyword">if</span> (isDragLTR)</span><br><span class="line">            &#123;</span><br><span class="line">                isDragLTR = <span class="literal">false</span>;</span><br><span class="line">                <span class="comment">//上一页</span></span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (isDragRTL)</span><br><span class="line">            &#123;</span><br><span class="line">                isDragRTL = <span class="literal">false</span>;</span><br><span class="line">                <span class="comment">//下一页</span></span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h3 id="👉-通过ping检测网络是否畅通"><a href="#👉-通过ping检测网络是否畅通" class="headerlink" title="👉 通过ping检测网络是否畅通"></a>👉 通过ping检测网络是否畅通</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 检测网络连接状态</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;urls&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CheckServeStatus</span>(<span class="params"><span class="built_in">string</span>[] urls</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> errCount = <span class="number">0</span>;<span class="comment">//ping时连接失败个数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!NetPing(urls, <span class="keyword">out</span> errCount))</span><br><span class="line">        &#123;</span><br><span class="line">             Debug.LogError(<span class="string">&quot;网络不稳定&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">             Debug.LogError(<span class="string">&quot;网络正常&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 通过ping检测网络是否畅通,true为网路OK</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;urls&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;errorCount&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">NetPing</span>(<span class="params"><span class="built_in">string</span>[] urls, <span class="keyword">out</span> <span class="built_in">int</span> errorCount</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">bool</span> NetOK = <span class="literal">true</span>;</span><br><span class="line">        System.Net.NetworkInformation.Ping ping = <span class="keyword">new</span> System.Net.NetworkInformation.Ping();</span><br><span class="line">        errorCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            PingReply pr;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; urls.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                pr = ping.Send(urls[i]);</span><br><span class="line">                <span class="keyword">if</span> (pr.Status == IPStatus.Success)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> NetOK;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    errorCount++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> !NetOK;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception)</span><br><span class="line">        &#123;</span><br><span class="line">            errorCount = urls.Length;</span><br><span class="line">            <span class="keyword">return</span> !NetOK;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="👉-删除文件夹下所有文件"><a href="#👉-删除文件夹下所有文件" class="headerlink" title="👉 删除文件夹下所有文件"></a>👉 删除文件夹下所有文件</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">   <span class="comment"><span class="doctag">///</span> 删除文件夹下所有文件</span></span><br><span class="line">   <span class="comment"><span class="doctag">///</span> deleteThis 是否删除本文件夹 默认只删除子文件夹和文件</span></span><br><span class="line">   <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DeleteFolder</span>(<span class="params"><span class="built_in">string</span> dir, <span class="built_in">bool</span> deleteThis = <span class="literal">false</span></span>)</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="comment">//如果存在这个文件夹删除之 </span></span><br><span class="line">       <span class="keyword">if</span> (Directory.Exists(dir))</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">foreach</span> (<span class="built_in">string</span> d <span class="keyword">in</span> Directory.GetFileSystemEntries(dir))</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="keyword">if</span> (File.Exists(d))</span><br><span class="line">               &#123;</span><br><span class="line">                   File.Delete(d); <span class="comment">//直接删除其中的文件 </span></span><br><span class="line">               &#125;</span><br><span class="line">               <span class="keyword">else</span></span><br><span class="line">               &#123;</span><br><span class="line">                   DeleteFolder(d, <span class="literal">true</span>); <span class="comment">//递归删除子文件夹  </span></span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span> (deleteThis)</span><br><span class="line">           &#123;</span><br><span class="line">               Directory.Delete(dir);</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="comment">//删除已空文件夹 </span></span><br><span class="line">           <span class="keyword">if</span> (NConfig.ShowDebug) Debug.LogError(dir + <span class="string">&quot;文件夹删除成功&quot;</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span> <span class="comment">//如果文件夹不存在则提示 </span></span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">if</span> (NConfig.ShowDebug) Debug.LogError(dir + <span class="string">&quot;该文件夹不存在&quot;</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="👉-时间A和B之间差多少秒"><a href="#👉-时间A和B之间差多少秒" class="headerlink" title="👉 时间A和B之间差多少秒"></a>👉 时间A和B之间差多少秒</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//时间差</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">TimeCorrect</span>(<span class="params">DateTime start, DateTime end</span>)</span></span><br><span class="line">   &#123;</span><br><span class="line">       DateTime IniTime = <span class="keyword">new</span> DateTime();</span><br><span class="line">       <span class="keyword">if</span> (start == IniTime)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> (<span class="built_in">int</span>)((end - start).TotalSeconds);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="👉-时间格式转换"><a href="#👉-时间格式转换" class="headerlink" title="👉 时间格式转换"></a>👉 时间格式转换</h3><details>
+  <summary>点我打开,查看代码</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//通过固定格式字符串赋值DateTime</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">GetLeftTimeString</span>(<span class="params">TimeSpan ts</span>)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> GetLeftTimeString(((<span class="built_in">int</span>)ts.TotalSeconds));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">GetLeftTimeString</span>(<span class="params"><span class="built_in">int</span> SecNumCont</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> Allstr = <span class="string">&quot;00:00:00&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (SecNumCont&gt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> hourNum = SecNumCont / <span class="number">3600</span>;</span><br><span class="line">        <span class="built_in">string</span> hourStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (hourNum &gt;= <span class="number">10</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            hourStr = hourNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            hourStr = <span class="string">&quot;0&quot;</span> + hourNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">int</span> minNum = (SecNumCont % <span class="number">3600</span>)/<span class="number">60</span>;</span><br><span class="line">        <span class="built_in">string</span> minStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (minNum &gt;= <span class="number">10</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            minStr = minNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            minStr = <span class="string">&quot;0&quot;</span> + minNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">int</span> secNum = SecNumCont % <span class="number">60</span>;</span><br><span class="line">        <span class="built_in">string</span> secStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (secNum &gt;= <span class="number">10</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            secStr = secNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            secStr = <span class="string">&quot;0&quot;</span> + secNum.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (hourNum == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Allstr = minStr + <span class="string">&quot;:&quot;</span> + secStr;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (minNum == <span class="number">0</span> &amp;&amp; hourNum == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Allstr = secStr;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            Allstr = hourStr + <span class="string">&quot;:&quot;</span> + minStr + <span class="string">&quot;:&quot;</span> + secStr;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Allstr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//通过固定格式字符串赋值DateTime</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">GetDateTime</span>(<span class="params"><span class="keyword">ref</span> DateTime dataTime,<span class="built_in">string</span> timeString, TimeSpan ts= <span class="keyword">new</span> TimeSpan(</span>))</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//2019-04-23T11:31:23</span></span><br><span class="line">    <span class="comment">//Debug.Log(timeString);</span></span><br><span class="line">    <span class="built_in">string</span> YearStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> LeftStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    YearStr = timeString.Substring(<span class="number">0</span>, timeString.IndexOf(<span class="string">&quot;-&quot;</span>));</span><br><span class="line">    LeftStr = timeString.Substring(timeString.IndexOf(<span class="string">&quot;-&quot;</span>)+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">string</span> MonthStr = LeftStr.Substring(<span class="number">0</span>, LeftStr.IndexOf(<span class="string">&quot;-&quot;</span>));</span><br><span class="line">    LeftStr = LeftStr.Substring(LeftStr.IndexOf(<span class="string">&quot;-&quot;</span>) + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">string</span> DayStr = LeftStr.Substring(<span class="number">0</span>, LeftStr.IndexOf(<span class="string">&quot;T&quot;</span>));</span><br><span class="line">    LeftStr = LeftStr.Substring(LeftStr.IndexOf(<span class="string">&quot;T&quot;</span>) + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">string</span> HourStr = LeftStr.Substring(<span class="number">0</span>, LeftStr.IndexOf(<span class="string">&quot;:&quot;</span>));</span><br><span class="line">    LeftStr = LeftStr.Substring(LeftStr.IndexOf(<span class="string">&quot;:&quot;</span>) + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">string</span> MinuteStr = LeftStr.Substring(<span class="number">0</span>, LeftStr.IndexOf(<span class="string">&quot;:&quot;</span>));</span><br><span class="line">    LeftStr = LeftStr.Substring(LeftStr.IndexOf(<span class="string">&quot;:&quot;</span>) + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> SecondStr = LeftStr.Substring(<span class="number">0</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">int</span> yearNum = <span class="built_in">int</span>.Parse(YearStr);</span><br><span class="line">    <span class="built_in">int</span> MonthNum = <span class="built_in">int</span>.Parse(MonthStr);</span><br><span class="line">    <span class="built_in">int</span> DayNum = <span class="built_in">int</span>.Parse(DayStr);</span><br><span class="line">    <span class="built_in">int</span> HourNum = <span class="built_in">int</span>.Parse(HourStr);</span><br><span class="line">    <span class="built_in">int</span> MinuteNum = <span class="built_in">int</span>.Parse(MinuteStr);</span><br><span class="line">    <span class="built_in">int</span> SecondNum = <span class="built_in">int</span>.Parse(SecondStr);</span><br><span class="line">    DateTime TempDateTime= <span class="keyword">new</span> DateTime(yearNum, MonthNum, DayNum, HourNum, MinuteNum, SecondNum);</span><br><span class="line">    <span class="comment">//Debug.Log(&quot;YearStr==&quot; + YearStr + &quot;______MonthStr====&quot; + MonthStr + &quot;____DayStr===&quot; + DayStr + &quot;___HourStr===&quot; + HourStr + &quot;__MinuteStr====&quot; + MinuteStr + &quot;___second====&quot; + SecondStr);</span></span><br><span class="line">    dataTime = TempDateTime.AddSeconds(ts.TotalSeconds);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h3 id="👉-随机数"><a href="#👉-随机数" class="headerlink" title="👉 随机数"></a>👉 随机数</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 随机数</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;rate&quot;&gt;</span>几率数组<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;total&quot;&gt;</span>几率总和<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">Rand</span>(<span class="params"><span class="built_in">int</span>[] rate, <span class="built_in">int</span> total</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> r = Random.Range(<span class="number">1</span>, total + <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">int</span> t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; rate.Length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            t += rate[i];</span><br><span class="line">            <span class="keyword">if</span> (r &lt; t)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="👉-生成二维码"><a href="#👉-生成二维码" class="headerlink" title="👉 生成二维码"></a>👉 生成二维码</h3><pre><code> 1 zxing.unity.dll 自己下载下好丢Plugins里面
+</code></pre>
+<details>
+  <summary>点我打开,查看代码</summary>
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">region</span> 生成二维码</span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> 将制定字符串信息转换成二维码图片信息</span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;formatStr&quot;&gt;</span>要产生二维码的字符串信息<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;width&quot;&gt;</span>二维码的宽度<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;height&quot;&gt;</span>二维码的高度<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">      <span class="function">Color32[] <span class="title">GeneQRCode</span>(<span class="params"><span class="built_in">string</span> formatStr, <span class="built_in">int</span> width, <span class="built_in">int</span> height</span>)</span></span><br><span class="line">      &#123;</span><br><span class="line">          ZXing.QrCode.QrCodeEncodingOptions options = <span class="keyword">new</span> ZXing.QrCode.QrCodeEncodingOptions();<span class="comment">//绘制二维码之前 进行设置</span></span><br><span class="line"></span><br><span class="line">          options.CharacterSet = <span class="string">&quot;UTF-8&quot;</span>;<span class="comment">//设置字符编码，确保字符串信息保持正确</span></span><br><span class="line"></span><br><span class="line">          options.Width = width;<span class="comment">//设置二维码宽</span></span><br><span class="line">          options.Height = height;<span class="comment">//设置二维码高</span></span><br><span class="line">          options.Margin = <span class="number">0</span>;<span class="comment">//设置二维码留白 （值越大，留白越大，二维码越小）</span></span><br><span class="line"></span><br><span class="line">          <span class="keyword">var</span> BarcodeWriter = <span class="keyword">new</span> BarcodeWriter &#123; Format = BarcodeFormat.QR_CODE, Options = options &#125;;<span class="comment">//实例化字符串绘制二维码工具</span></span><br><span class="line"></span><br><span class="line">          <span class="keyword">return</span> BarcodeWriter.Write(formatStr);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> 根据二维码图片信息绘制制定字符串信息的二维码到指定区域</span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;str&quot;&gt;</span>字符串信息<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;width&quot;&gt;</span>二维码的宽度<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;height&quot;&gt;</span>二维码的高度<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">      <span class="function">Texture2D <span class="title">ShowQRCode</span>(<span class="params"><span class="built_in">string</span> str, <span class="built_in">int</span> width, <span class="built_in">int</span> height</span>)</span></span><br><span class="line">      &#123;</span><br><span class="line">          Texture2D texture = <span class="keyword">new</span> Texture2D(width, height);</span><br><span class="line"></span><br><span class="line">          Color32[] colors = GeneQRCode(str, width, height);</span><br><span class="line"></span><br><span class="line">          texture.SetPixels32(colors);</span><br><span class="line"></span><br><span class="line">          texture.Apply();</span><br><span class="line"></span><br><span class="line">          <span class="keyword">return</span> texture;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> 绘制二维码</span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">      <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;formatStr&quot;&gt;</span>二维码信息<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">      <span class="function"><span class="keyword">void</span> <span class="title">DrowQRCode</span>(<span class="params"><span class="built_in">string</span> formatStr</span>)</span></span><br><span class="line">      &#123;</span><br><span class="line">          Texture2D texture = ShowQRCode(formatStr, <span class="number">256</span>, <span class="number">256</span>);<span class="comment">//注意：这个宽高度大小256不要变。不然生成的信息不正确</span></span><br><span class="line">                                                              <span class="comment">//256有可能是这个ZXingNet插件指定大小的绘制像素点数值</span></span><br><span class="line">          QRCode.texture = texture;<span class="comment">//显示到UI界面的图片上</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="meta">#<span class="keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<p><br></br></p>
+<div class="poem-wrap">
+  <div class="poem-border poem-left"></div>
+  <div class="poem-border poem-right"></div>
+    <h1>世间多浮躁<br>当吟诗一首</br></h1>
+    <p id="poem">挑选中...</p>
+    <p id="info">
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+  </script>
+</div>
+      
+ 
+    <div>
+    
+        <p style="text-align: center"><a target="_blank" rel="noopener" href="https://afdian.net/@linsheng11/plan" ><img src="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/afd.png"></img></a></p>
+    
+</div>
+  
+    </div>
+
+    
+    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>【Unity展厅】 工具合集</a></p>
+  <p><span>文章作者:</span> L . S</a></p>
+  <p><span>发布时间:</span>2022年08月01日 - 15:51:33</p>
+  <p><span>最后更新:</span>2022年08月03日 - 14:23:24</p>
+  <p><span>原始链接:</span><a href="/Code/unity/20220801/21012080/" title="【Unity展厅】 工具合集">https://linsheng.tk/Code/unity/20220801/21012080/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://linsheng.tk/Code/unity/20220801/21012080/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+      </div>
+ 
+</div>
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Code/hexo/20220731/480705806/" rel="prev" title="【hexo建站】 六: 优化文章路径,各大搜索引擎接入">
+      <i class="fa fa-chevron-left"></i> 【hexo建站】 六: 优化文章路径,各大搜索引擎接入
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Code/unity/20220801/21012080/" rel="next" title="【Unity展厅】 翻书系统">
+      【Unity展厅】 翻书系统 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%9A-%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-text">1： 工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E5%8A%A0%E8%BD%BD%E5%89%8D%E6%8F%90%E4%BB%8B%E7%BB%8D"><span class="nav-text">👉 加载前提介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E5%8A%A0%E8%BD%BDStreamingAssets%E4%B8%8B%E7%9A%84%E8%B5%84%E6%BA%90"><span class="nav-text">👉 加载StreamingAssets下的资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E6%9C%AC%E5%9C%B0%E5%8A%A0%E8%BD%BD%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87"><span class="nav-text">👉 本地加载设置图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E6%89%8B%E6%8C%87%E5%8F%8C%E5%87%BB%E5%B1%8F%E5%B9%95"><span class="nav-text">👉 手指双击屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E8%AF%86%E5%88%AB%E6%89%8B%E6%8C%87%E8%BD%AC%E5%9C%88"><span class="nav-text">👉 识别手指转圈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8BUI"><span class="nav-text">👉 射线检测UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E8%AF%86%E5%88%AB%E6%89%8B%E5%8A%BF%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3"><span class="nav-text">👉 识别手势上下左右</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E9%80%9A%E8%BF%87ping%E6%A3%80%E6%B5%8B%E7%BD%91%E7%BB%9C%E6%98%AF%E5%90%A6%E7%95%85%E9%80%9A"><span class="nav-text">👉 通过ping检测网络是否畅通</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-text">👉 删除文件夹下所有文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E6%97%B6%E9%97%B4A%E5%92%8CB%E4%B9%8B%E9%97%B4%E5%B7%AE%E5%A4%9A%E5%B0%91%E7%A7%92"><span class="nav-text">👉 时间A和B之间差多少秒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text">👉 时间格式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-text">👉 随机数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%91%89-%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-text">👉 生成二维码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">世间多浮躁当吟诗一首</span></a></div>
+
+          <!--/ 在目录里面显示回到首页 -->
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="L . S"
+      src="https://gcore.jsdelivr.net/gh/linsheng11/ls/images/author.jpg">
+  <p class="site-author-name" itemprop="name">L . S</p>
+  <div class="site-description" itemprop="description">那些年你很冒险的梦</div>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span style="font-size:20px ;color:#7bbfea;font-weight:bold; ">0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">L . S</span>
+</div>
+
+<span id="timeDate">载入天数...</span>
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("07/25/2022 12:49:00");
+    //此处修改你的建站时间或者网站上线时间 
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = "已在未知中探险了&emsp;🌎&emsp;"+ "<a style='color:#feeeed'>" +dnum+"</a>" +" 天   " ;
+    //document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script src="//gcore.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '0px',
+  left: 'unset',
+  time: '0s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: 'transparent',
+  buttonColorLight: 'transparent',
+  saveInCookies: false,
+  label: '',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+if (window.darkmode && !window.darkmode.isActivated()) {
+  window.darkmode.toggle();
+  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
+  if (toggleButtons && toggleButtons.length > 0) {
+    for (i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].classList.add("darkmode-toggle--white");
+    }
+  }
+}
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//gcore.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'XckMsgGMfHIdM6bemJBHa9t7-gzGzoHsz',
+      appKey     : 'aYXXMcFO9X4AXe3JMdVmAU1u',
+      placeholder: "开始你的表演",
+      avatar     : 'monsterid',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
