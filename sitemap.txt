@@ -26,6 +26,6 @@ https://linsheng.tk/
 https://linsheng.tk/categories/blender/
 https://linsheng.tk/categories/Code/
 https://linsheng.tk/categories/Code/hexo/
+https://linsheng.tk/categories/live/
 https://linsheng.tk/categories/music/
 https://linsheng.tk/categories/Code/unity/
-https://linsheng.tk/categories/live/
